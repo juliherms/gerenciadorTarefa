@@ -1,4 +1,4 @@
-const { Router } = require('express');
+import Router from  'express';
 
 //minhas configuracoes de rota
 
@@ -8,4 +8,4 @@ routes.get('/', (req,res) => {
     return res.json({ message : 'Hello World' })
 })
 
-module.exports = routes;
+export default routes;
