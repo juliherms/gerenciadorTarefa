@@ -7,4 +7,6 @@ const routes = new Router();
 
 routes.post('/tarefas', TarefaController.store);
 
+routes.put('/tarefas',TarefaController.update);
+
 export default routes;
