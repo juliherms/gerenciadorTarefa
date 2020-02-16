@@ -1,18 +1,10 @@
 import Router from  'express';
-import Tarefa from './app/model/tarefa';
+import TarefaController from './app/controllers/TarefaController';
 
 //minhas configuracoes de rota
 
 const routes = new Router();
 
-routes.get('/', async (req,res) => {
-
-    const tarefa = await Tarefa.create({
-        descricao: 'Estudar Node',
-        status: 1
-    });
-
-    return res.json(tarefa);
-})
+routes.post('/tarefas', TarefaController.store);
 
 export default routes;
